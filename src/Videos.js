@@ -4,7 +4,9 @@ import "./Video.css";
 function Videos() {
     return (
         <div className="video">
-            
+            <video src="" loop>
+
+            </video>
         </div>
     )
 }
