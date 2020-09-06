@@ -4,7 +4,7 @@ import VideoFooter from './VideoFooter.js';
 import VideoSidebar from './VideoSidebar';
 
 function Videos({url, user, description, song, likes, shares, messages}) {
-    const [playing, setPlaying] = useState(false);
+    let [playing, setPlaying] = useState(false);
     const videoRef = useRef(null);
 
     const onClickAction = () =>{
@@ -20,7 +20,7 @@ function Videos({url, user, description, song, likes, shares, messages}) {
 
     return (
         <div className="video">
-            <video loop className="video-player" ref={videoRef} 
+            <video onClick={onClickAction} type="video/mp4" loop className="video-player" ref={videoRef} 
             src={url}>
 
             </video>
